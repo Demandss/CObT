@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'su.demands'
+version 'SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'su.demands.cobt.CObT'
+        )
+    }
+}
+
+compileJava.options.encoding = 'UTF-8'
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
